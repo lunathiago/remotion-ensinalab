@@ -6,7 +6,15 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "deploy:lambda": "node deploy-lambda.mjs",
+    "lambda:functions": "npx remotion lambda functions deploy --region us-east-1 --memory 2048 --timeout 120",
+    "lambda:site": "npx remotion lambda sites create src/index.ts --region us-east-1 --site-name remotion-ensinalab",
+    "lambda:ls": "npx remotion lambda functions ls --region us-east-1 && npx remotion lambda sites ls --region us-east-1",
+    "lambda:render": "npx remotion lambda render HelloWorld output.mp4 --region us-east-1",
+    "lambda:setup": "./setup-iam.sh",
+    "lambda:cleanup": "./cleanup-aws.sh",
+    "lambda:render-example": "./render-example.sh"
   },
   "repository": {},
   "license": "UNLICENSED",

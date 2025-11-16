@@ -31,6 +31,24 @@ npm run dev
 npx remotion render
 ```
 
+**Deploy to AWS Lambda**
+
+See [DEPLOY.md](./DEPLOY.md) for complete instructions.
+
+```console
+# Setup IAM (first time only)
+./setup-iam.sh
+
+# Deploy Lambda function
+npm run lambda:functions
+
+# Deploy site
+npm run lambda:site
+
+# Render on Lambda
+npm run lambda:render
+```
+
 **Upgrade Remotion**
 
 ```console

@@ -5,3 +5,14 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+build
+
+# AWS config (may contain sensitive info)
+.aws/
+*.pem
+
+# Video outputs
+*.mp4
+*.mov
+*.webm
