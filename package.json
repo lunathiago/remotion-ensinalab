@@ -11,12 +11,12 @@
   "repository": {},
   "license": "UNLICENSED",
   "dependencies": {
-    "@remotion/cli": "^4.0.58",
-    "@remotion/lambda": "^4.0.58",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "remotion": "^4.0.58",
+    "@remotion/cli": "^4.0.375",
+    "@remotion/lambda": "^4.0.375",
     "@remotion/zod-types": "^4.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.375",
     "zod": "3.22.3"
   },
   "devDependencies": {
