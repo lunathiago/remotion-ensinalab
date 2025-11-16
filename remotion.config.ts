@@ -1,10 +1,15 @@
-// See all configuration options: https://remotion.dev/docs/config
-// Each option also is available as a CLI flag: https://remotion.dev/docs/cli
+// FORMATO NOVO - CORRETO
+import {defineConfig} from 'remotion';
 
-// Note: When using the Node.JS APIs, the config file doesn't apply. Instead, pass options directly to the APIs
+export default defineConfig({
+  // O nome do seu bucket S3 será gerado a partir disso
+  // ex: remotion-render-my-video-xxxx
+  s3Bucket: 'remotion-render-ensinalab', // <- Troque para um nome único se quiser
+  
+  // A região da AWS para fazer o deploy.
+  // Precisa ser a mesma que você usou no bootstrap!
+  lambdaRegion: 'us-east-1',
 
-import { Config } from "@remotion/cli/config";
-
-Config.setVideoImageFormat("jpeg");
-Config.setOverwriteOutput(true);
-Config.setLambdaRegion('us-east-1'); // <-- VERIFIQUE ESTA LINHA
+  // Opcional: outras configurações que você pode querer
+  // ...
+});
